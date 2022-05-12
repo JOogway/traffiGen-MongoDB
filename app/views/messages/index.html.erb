@@ -2,13 +2,15 @@
 
 <h1>Messages</h1>
 
-<div id="messages">
+<div id="messages" class="d-flex flex-row">
   <% @messages.each do |message| %>
+  <div class="d-flex flex-column-center">
     <%= render message %>
-    <p>
-      <%= link_to "Show this message", message %>
-    </p>
+    <!-- <p>
+      <%= link_to "Show this message", message , class: "btn btn-primary" %>
+    </p> -->
+  </div>
   <% end %>
 </div>
 
-<%= link_to "New message", new_message_path %>
+<%= link_to "New message", new_message_path, class: "btn btn-primary" %>
